@@ -11,7 +11,7 @@ class VehicleTest < Minitest::Test
     assert_instance_of Vehicle, vehicle
   end
 
-  def test_it_has_a_attributes
+  def test_it_has_attributes
     vehicle = Vehicle.new("2001", "Honda", "Civic")
     assert_equal "2001", vehicle.year
     assert_equal "Honda", vehicle.make
@@ -19,12 +19,14 @@ class VehicleTest < Minitest::Test
   end
 
   def test_it_has_a_nil_for_default_driver
+    skip
     vehicle = Vehicle.new("2001", "Honda", "Civic")
     assert_equal nil, vehicle.driver
     # will the above also work as assert nil, vehicle.driver
   end
 
   def test_it_can_add_drivers
+    skip
     vehicle = Vehicle.new("2001", "Honda", "Civic")
     driver = Driver.new("Bob")
     vehicle.add_driver(driver)
@@ -32,6 +34,7 @@ class VehicleTest < Minitest::Test
   end
 
   def test_it_can_speed
+    skip
     vehicle = Vehicle.new("2001", "Honda", "Civic")
     assert_equal false, vehicle.speeding?
     # try the above as refute vehicle.speeding?
