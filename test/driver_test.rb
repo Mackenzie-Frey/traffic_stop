@@ -1,7 +1,7 @@
 require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/driver'
-require './lib/pry'
+require 'pry'
 
 class DriverTest < Minitest::Test
 
