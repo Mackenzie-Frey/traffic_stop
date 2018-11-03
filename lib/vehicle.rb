@@ -8,10 +8,10 @@ class Vehicle
               :driver
 
   def initialize(year, make, model)
-    @year   = year
-    @make   = make
-    @model  = model
-    @driver = nil
+    @year     = year
+    @make     = make
+    @model    = model
+    @driver   = nil
     @speeding = false
   end
 
@@ -26,5 +26,4 @@ class Vehicle
   def speeding?
     @speeding
   end
-
 end

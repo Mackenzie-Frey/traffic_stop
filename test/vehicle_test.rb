@@ -31,13 +31,8 @@ class VehicleTest < Minitest::Test
 
   def test_it_can_speed
     vehicle = Vehicle.new("2001", "Honda", "Civic")
-    assert_equal false, vehicle.speeding?
-    # try the above as refute vehicle.speeding?
+    refute vehicle.speeding?
     vehicle.speed
-    # try the above as assert, vehicle.speeding?
-    assert_equal true, vehicle.speeding?
+    assert vehicle.speeding?
   end
 end
-
-# go back through interaction pattern... to confirm correct...
-# aka copy and paste into pry
