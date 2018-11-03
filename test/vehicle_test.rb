@@ -1,8 +1,7 @@
 require 'minitest/autorun'
 require 'minitest/pride'
-require 'pry'
-require './lib/driver'
 require './lib/vehicle'
+require 'pry'
 
 class VehicleTest < Minitest::Test
 
@@ -18,15 +17,12 @@ class VehicleTest < Minitest::Test
     assert_equal "Civic", vehicle.model
   end
 
-  def test_it_has_a_nil_for_default_driver
-    skip
+  def test_it_is_nil_for_default_driver
     vehicle = Vehicle.new("2001", "Honda", "Civic")
-    assert_equal nil, vehicle.driver
-    # will the above also work as assert nil, vehicle.driver
+    assert_nil vehicle.driver
   end
 
-  def test_it_can_add_drivers
-    skip
+  def test_it_can_add_driver
     vehicle = Vehicle.new("2001", "Honda", "Civic")
     driver = Driver.new("Bob")
     vehicle.add_driver(driver)
@@ -34,12 +30,10 @@ class VehicleTest < Minitest::Test
   end
 
   def test_it_can_speed
-    skip
     vehicle = Vehicle.new("2001", "Honda", "Civic")
     assert_equal false, vehicle.speeding?
     # try the above as refute vehicle.speeding?
     vehicle.speed
-    assert_equal false, vehicle.speeding?
     # try the above as assert, vehicle.speeding?
     assert_equal true, vehicle.speeding?
   end
